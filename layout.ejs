@@ -1,0 +1,52 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Land Record Management</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- bootstrap 4.3.1 -->
+        <link rel="stylesheet" href="css/vendor/bootstrap.min.css">
+        <!-- styles -->
+        <link rel="stylesheet" href="css/styles.min.css">
+        <!-- favicon -->
+        <link rel="icon" href="img/favicon.ico">
+    
+        
+        <script>
+    
+    (function() {
+    'use strict';
+    window.addEventListener('load', function() {
+    //Fetch all the forms we want to apply custom Bootstrap validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    //Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+    form.addEventListener('submit', function(event) {
+    if (form.checkValidity() === false) {
+    event.preventDefault();
+    event.stopPropagation();
+    }
+    form.classList.add('was-validated');
+    }, false);
+    });
+    }, false);
+    })();
+        </script>
+    
+    </head>
+    <body>
+        <%-body %>
+
+        <!-- app -->
+<script src="js/utils/app.js"></script>
+<!-- XM_Plugins -->
+<script src="js/vendor/xm_plugins.min.js"></script>
+<!-- form.utils -->
+<script src="js/form/form.utils.js"></script>
+<!-- landing.tabs -->
+<script src="js/landing/landing.tabs.js"></script>
+<!-- SVG icons -->
+<script src="js/utils/svg-loader.js"></script>
+    </body>
+</html>
